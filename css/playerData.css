@@ -1,0 +1,94 @@
+﻿* {
+    outline: none;
+    color: white;
+	text-decoration: none;
+    box-sizing: border-box;
+    font-family: Myriad Pro, Open Sans, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+label, h1 {
+	font-size: 0.85vw;
+	font-weight: bold;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.invisible {
+	visibility: hidden !important;
+}
+
+.data-panel {
+	position: absolute;
+	width: 40vw;
+	height: 50vh;
+	top: 25vh;
+	left: 30vw;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+.data-panel > div {
+	position: absolute;
+	height: 46vh;
+	width: 32vw;
+	left: 8vw;
+	top: 4vh;
+	padding: 10px;
+}
+
+.data-header {
+	height: 4vh;
+	background-color: rgba(20, 20, 20, 0.85);
+}
+
+.data-header * {
+	display: inline-block;
+}
+
+.header-logo img { 
+	max-height: 4vh;
+	padding: 0.5vh 0px 0.5vh 10px;
+}
+
+.heading-left {
+	width: 25vw;
+	height: 7vh;
+	padding: 1vh 10px;
+    vertical-align: middle;
+}
+
+.heading-right {
+	position: absolute;
+	left: calc(40vw - 32px);
+	top: -0.5vh;
+}
+
+.heading-right img {
+	margin-top: 1.5vh;
+	height: 2vh;
+}
+
+.navigation-menu {
+	width: 8vw;
+	height: 46vh;
+	background-color: rgba(20, 20, 20, 0.85);
+	display: table;
+}
+
+.navigation-menu div {
+	vertical-align: middle;
+	height: 11.5vh;
+	text-align: center;
+	font-weight: bolder;
+	line-height: 11.5vh;
+	text-transform: uppercase;
+	border-bottom: 1px solid #7F7F7F;
+}
+
+.navigation-menu div:hover {
+	cursor: pointer;
+	background-color: rgba(40, 40, 40, 0.75);
+}

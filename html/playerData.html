@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/scrollbar.css" />
+		<link rel="stylesheet" href="../css/playerData.css" />
+	</head>
+	<body>
+		<div id="data-container" class="data-panel">
+			<header class="data-header">
+				<div id="logo" class="header-logo hidden"><img src="../img/LSSD.png" /></div>
+				<div class="heading-left" data-i18n="data.title">Información del ciudadano</div>
+				<div class="heading-right"><img src="../img/close.png" onclick="mp.trigger('closePlayerData')"/></div>
+			</header>
+
+			<nav class="navigation-menu">
+				<div onclick="showPanel('basicData')" data-i18n="data.basic"></div>
+				<div onclick="showPanel('propertiesData')" data-i18n="data.properties"></div>
+				<div onclick="showPanel('vehiclesData')" data-i18n="data.vehicles"></div>
+				<div id="extended" onclick="showPanel('extendedData')" class="invisible" data-i18n="data.extended"></div>
+			</nav>
+			
+			<div id="basicData">
+				<label for="name" data-i18n="data.name"></label>
+				<p id="name"></p>
+
+				<label for="age" data-i18n="data.age"></label>
+				<p id="age"></p>
+				
+				<label for="sex" data-i18n="data.sex"></label>
+				<p id="sex"></p>
+				
+				<label for="money" data-i18n="data.money" class="hidden"></label>
+				<p id="money" class="hidden"></p>
+				
+				<label for="bank" data-i18n="data.bank"></label>
+				<p id="bank"></p>
+				
+				<label for="job" data-i18n="data.job"></label>
+				<p id="job"></p>
+				
+				<label for="rank" data-i18n="data.rank" class="hidden"></label>
+				<p id="rank" class="hidden"></p>
+
+				<label for="clan" data-i18n="data.clan" class="hidden"></label>
+				<p id="clan" class="hidden"></p>
+			</div>
+			
+			<div id="propertiesData" class="hidden">
+				<h1 data-i18n="data.owned-properties"></h1>
+				<ul id="property-list"></ul>
+				<h1 data-i18n="data.rented-properties"></h1>
+				<span id="rented-property"></span>
+			</div>
+			
+			<div id="vehiclesData" class="hidden">
+				<h1 data-i18n="data.owned-vehicles"></h1>
+				<ul id="owned-vehicles"></ul>
+				<h1 data-i18n="data.lent-vehicles"></h1>
+				<ul id="lent-vehicles"></ul>
+			</div>
+			
+			<div id="extendedData" class="hidden">
+			
+			</div>
+		</div>
+  </body>
+
+  <script src="../lib/jquery-3.4.0.min.js"></script>
+  <script src="../lib/i18next.min.js"></script>
+  <script src="../lib/jquery-i18next.min.js"></script>
+  <script src="../lib/i18nextXHRBackend.min.js"></script>
+  <script src="../js/utils/initializer.js"></script>
+  <script src="../js/playerData.js"></script>
+
+</html>

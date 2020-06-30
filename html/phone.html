@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/phone.css">
+    </head>
+
+    <body>
+        <div id="container" class="phone-container home">
+            <img src="../img/phone/phone.png" />
+
+            <div id="content" class="phone-content home">
+                <!-- Show the time, battery and network status -->
+                <nav class="phone-data home">
+                    <div class="icon-data-wrapper battery"></div>
+                    <div class="icon-data-wrapper signal"></div>
+                </nav>
+
+                <!-- Show the home screen -->
+                <div id="home">
+                    <div class="clock">
+                        <div id="time" class="time"></div>
+                        <div id="date" class="date"></div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="call-app" onclick="showNewScreen('calls')"></div>
+                        <div class="sms-app" onclick="showNewScreen('messages')"></div>
+                        <div class="contacts-app" onclick="showNewScreen('contacts')"></div>
+                    </div>
+                </div>
+
+                <!-- Show the menu with latest calls -->
+                <div id="calls" class="no-display">
+                    <div class="card search-card">
+                        <div class="card-search-image">
+                            <img src="../img/phone/search.png" />
+                        </div>
+                        <div class="card-search-input">
+                            <input id="search" placeholder="Buscar contactos" />
+                        </div>
+                    </div>
+                    <nav class="calls-options">
+                        <div class="option-wrapper option-active"><img src="../img/phone/last_calls.png"/></div>
+                        <div class="option-wrapper"><img src="../img/phone/contacts.png"/></div>
+                    </nav>
+                    <div id="latest-calls" class="card-holder">
+                        <div class="card phone-card">
+                            <div class="card-avatar"><span>T</span></div>
+                            <div class="card-text">
+                                <div class="card-text-header">Test contacto</div>
+                                <div class="card-text-footer">Hace 5 días</div>
+                            </div>
+                            <div class="card-option">
+                                <img src="../img/phone/recall.png" />
+                            </div>
+                        </div>
+                        <div class="card phone-card">
+                            <div class="card-avatar"><span>P</span></div>
+                            <div class="card-text">
+                                <div class="card-text-header">Prueba contacto</div>
+                                <div class="card-text-footer">Hace 3 días</div>
+                            </div>
+                            <div class="card-option">
+                                <img src="../img/phone/recall.png" />
+                            </div>
+                        </div>
+                        <div id="dial-button" class="floating-button right"><img src="../img/phone/dialpad.png"/></div>
+                    </div>
+                    <div id="contact-list" class="no-display">
+                        <div class="contact-row">
+                            <div class="contact-start">C</div>
+                            <div class="card-avatar"><span>C</span></div>
+                            <div class="contact-name">Contacto de prueba</div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-start"></div>
+                            <div class="card-avatar"><span>C</span></div>
+                            <div class="contact-name">Contacto de test</div>
+                        </div>
+                        <div class="floating-button right" onclick="showNewScreen('contact-creator')"><img src="../img/phone/add_contact.png"/></div>
+                    </div>
+                </div>
+
+                <!-- Show the dial pad -->
+                <div id="dial-pad" class="no-display">
+                    <div class="contacts-filter">
+
+                    </div>
+                    <div class="phone-type">
+                        <div class="number-display"><span id="display"></span></div>
+                        <div id="backspace" class="display-clear"><img src="../img/phone/backspace.png"/></div>
+                    </div>
+                    <div class="number-container">
+                        <div>1</div><div>2</div><div>3</div>
+                        <div>4</div><div>5</div><div>6</div>
+                        <div>7</div><div>8</div><div>9</div>
+                        <div></div><div>0</div><div></div>
+                    </div>
+                    <div class="floating-button middle"><img id="call-icon" src="../img/phone/call.png"/></div>
+                </div>
+
+                <!-- Show the contacts -->
+                <div id="contacts" class="no-display">
+                    <h1 class="contact-header" data-i18n="phone.contacts">Contactos</h1>
+                    <div id="contact-container" class="contact-container">
+                        <div class="contact-row">
+                            <div class="contact-start">C</div>
+                            <div class="card-avatar"><span>C</span></div>
+                            <div class="contact-name">Contacto de prueba</div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-start">C</div>
+                            <div class="card-avatar"><span>C</span></div>
+                            <div class="contact-name">Contacto de prueba</div>
+                        </div>
+                    </div>
+                    <div class="floating-button right" onclick="showNewScreen('contact-creator')"><img src="../img/phone/add_contact.png"/></div>
+                </div>
+
+                <!-- Contact creator -->
+                <div id="contact-creator" class="no-display">
+                    <h1 class="contact-header" data-i18n="phone.create-contact">Crear contacto</h1>
+                </div>
+
+                <!-- Show the messages home screen -->
+                <div id="messages" class="no-display">
+                    <h1 class="contact-header" data-i18n="phone.messages">Mensajes</h1>
+                    <div id="contact-container" class="contact-container">
+                        <div class="contact-row">
+                            <div class="card-avatar"><span>C</span></div>
+                            <div class="message-number">Contacto de prueba</div>
+                            <div class="message-preview">Contacto de prueba</div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="card-avatar"><span>C</span></div>
+                            <div class="message-number">Contacto de prueba</div>
+                            <div class="message-preview">samdasnn dasdj sajdj jsaj djau dweryewyr yweyr yweyry wueri iooasdo aodoa so</div>
+                        </div>
+                    </div>
+                    <div class="floating-button right" onclick="showNewScreen('compose-message')"><img src="../img/phone/chat.png"/></div>
+                </div>
+
+                <!-- Message composer -->
+                <div id="compose-message" class="no-display">
+                    <h1 class="contact-header" data-i18n="phone.messages">Nueva conversación</h1>
+                    <div class="search-message">
+                        <span>Para</span>
+                        <input id="message-send" class="" placeholder="Nombre o teléfono"/>
+                    </div>
+                    <div class="contact-first-letter">C</div>
+                    <div class="contact-row">
+                        <div class="card-avatar"><span>C</span></div>
+                        <div class="message-number">Contacto de prueba</div>
+                        <div class="message-preview">Contacto de prueba</div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="card-avatar"><span>C</span></div>
+                        <div class="message-number">Contacto de test</div>
+                        <div class="message-preview">Contacto de test</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="virtual-buttons" class="virtual-buttons home">
+                <div id="virtual-back" class="virtual-back" onclick="goBack()"></div>
+                <div id="virtual-home" class="virtual-home" onclick="showHomeScreen()"></div>
+                <div id="virtual-close" class="virtual-close" onclick="mp.trigger('HidePhone')"></div>
+            </div>
+        </div>
+
+        <script src="../lib/jquery-3.4.0.min.js"></script>
+        <script src="../lib/i18next.min.js"></script>
+        <script src="../lib/jquery-i18next.min.js"></script>
+        <script src="../lib/i18nextXHRBackend.min.js"></script>
+        <script src="../js/utils/initializer.js"></script>
+        <script src="../js/phone.js"></script>
+    </body>
+</html>

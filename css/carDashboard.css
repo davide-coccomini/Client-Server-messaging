@@ -1,0 +1,180 @@
+@font-face {
+    font-family: "digi";
+    src: url("../fonts/DS-DIGI.TTF");
+}
+body {
+    background: transparent !important;
+}
+#container {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.72) 56%, rgba(0, 0, 0, 0) 100%);
+    position:absolute;
+    right: 1vw;
+    bottom: 0;
+    color: whitesmoke;
+    padding-bottom: 1vh;
+    padding-right:0;
+    border-radius: 1vh;
+    border-bottom-right-radius: 0;
+}
+#speedometer {
+    font-family: "digi";
+    font-size: 4.5vw;
+    margin-top:2.5vh;
+}
+.kms {
+    font-family: "digi";
+    font-size:4vh;
+}
+#direction {
+    font-size: 4vh;
+}
+#odometer {
+    font-family: "digi";
+    font-size: 4vh;
+    margin-top: -6vh;
+}
+#warnings {
+    margin-top: 2.5vh;
+    padding-left: 0.1vw;
+}
+.icon {
+    width: 5.7vh;
+    margin-top:1vh;
+}
+#engine {
+    margin-left:0.4vw
+}
+p {
+    margin-bottom: 0 !important;
+    text-align: center;
+}
+#street {
+    margin-top: 1.5vh;
+    margin-left: -2vh;
+}
+#main-street {
+    font-size: 1.7vh;
+}
+#city {
+    font-size: 1.5vh;
+}
+.attendance {
+    width: 90%;
+    float: left;
+    background-color: #1f1f1f;
+    margin: 7px 5% 5px 5%;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-color: #111111 #4e4e4e #4e4e4e #111111;
+    border-width: 2px;
+}
+#belt {
+    width: 6.7vh;
+    height: 4vh;
+}
+
+.attendance .title {
+    font-family: "Arial";
+    color: white;
+    font-size: 9pt;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 0px 5px 0px;
+}
+
+.attendance-bar {
+    float: left;
+    width: 90%;
+    margin: 0px 5% 0px 5%;
+    height: 260px;
+    background-color: #2f2f2f;
+}
+
+.attendance-cage-css {
+    width: 80px;
+    float: left;
+    background-color: #6ae719;
+    height: 5px;
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+}
+
+.bar-1,
+.bar-2,
+.bar-3,
+.bar-4,
+.bar-5,
+.bar-6,
+.bar-7,
+.bar-8,
+.bar-9 {
+    float: left;
+    width: 100%;
+    background-color: #1f1f1f;
+    height: 10px;
+    z-index: 9999;
+}
+
+.bar-1 {
+    margin-bottom: 14px;
+}
+
+.bar-2 {
+    margin-bottom: 15px;
+}
+
+.bar-3 {
+    margin-bottom: 16px;
+}
+
+.bar-4 {
+    margin-bottom: 17px;
+}
+
+.bar-5 {
+    margin-bottom: 18px;
+}
+
+.bar-6 {
+    margin-bottom: 19px;
+}
+
+.bar-7 {
+    margin-bottom: 20px;
+}
+
+.bar-8 {
+    margin-bottom: 24px;
+}
+
+.bar-9 {
+    margin-bottom: 22px;
+}
+
+.attendance-level {
+    float: left;
+    height: 80%;
+    width: 80px;
+    z-index: 9999;
+    position: absolute;
+    top: 60px;
+}
+
+#changeatt,
+#changeatt:hover {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    cursor: pointer;
+}
+#fuel {
+    margin-left: -5vw;
+    margin-top: 2.1vh;
+}
+#fuel-icon{
+    margin-left: -5.5vh;
+    margin-top:12.5vh;
+}

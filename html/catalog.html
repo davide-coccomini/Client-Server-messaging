@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/scrollbar.css">
+		<link rel="stylesheet" href="../css/catalog.css">
+        <link rel="stylesheet" href="../css/farbtastic.css">
+	</head>
+
+	<body class="shadow">
+        <div id="catalog" class="catalog-container">
+            <header class="catalog-header">
+                <div class="vehicle-sorter">
+                    <div class="searcher"><input id="search-vehicle" data-i18n="[placeholder]cardealer.search" /></div>
+                </div>
+                <nav id="filter-grouper" class="filter-group">
+                    <div id="filter-adder" class="filter add">+</div>
+                </nav>
+                <div id="multi-select" class="select vehicle-class closed">
+                        <span data-i18n="cardealer.vehicle-type"></span>
+                    <div class="option-set no-display"></div>
+                </div>
+            </header>
+            
+            <!-- Vehicle cards -->
+            <div id="catalog-vehicles" class="catalog-vehicles"></div>
+            
+        </div>
+                
+        <div id="filter-modal" class="filter-modal no-display">
+            <img id="close-modal" class="close" src="../img/carshop/close.png" />
+            <div id="single-select" class="select filter-name closed">
+                <span data-i18n="cardealer.filter-value"></span>
+                <div class="option-set no-display"></div>
+            </div>
+            <div id="min-max" class="min-max">
+                <div>
+                    <label data-i18n="cardealer.minimum"></label>
+                    <input type="number" maxlength="8" value="0" />
+                </div>
+                <div>
+                    <label data-i18n="cardealer.maximum"></label>
+                    <input type="number" maxlength="8" value="0" />
+                </div>
+            </div>
+            <div id="add-filter" class="add-filter" data-i18n="cardealer.add-filter"></div>
+        </div>
+        
+        <div id="vehicle-preview" class="preview-content no-display">  
+            <!-- Vehicle first color -->
+            <div>
+                <span data-i18n="tunning.primary-color"></span>
+                <div id="first-vehicle-color"></div>
+            </div>
+            
+            <!-- Vehicle second color -->
+            <div>
+                <span data-i18n="tunning.secondary-color"></span>
+                <div id="second-vehicle-color"></div>
+            </div>
+            
+            <!-- Vehicle rotation change -->
+            <div>
+                <p class="header" data-i18n="cardealer.vehicle-rotate"></p>
+                <input type="range" id="vehicle-slider" min="0" max="360" oninput="rotatePreviewVehicle()" />
+            </div>
+            
+            <!-- Buttons -->
+            <div class="button-grouper">
+                <div id="catalog-purchase" class="button disabled" data-i18n="general.purchase" onclick="purchaseVehicle()"></div>
+                <div class="button" data-i18n="general.back" onclick="mp.events.call('closeCatalog')"></div>
+            </div>
+        </div>
+
+		<script src="../lib/jquery-3.4.0.min.js"></script>
+		<script src="../lib/i18next.min.js"></script>
+		<script src="../lib/jquery-i18next.min.js"></script>
+		<script src="../lib/i18nextXHRBackend.min.js"></script>
+		<script src="../lib/farbtastic.js"></script>
+		<script src="../js/utils/initializer.js"></script>
+		<script src="../js/catalog.js"></script>
+	</body>
+</html>

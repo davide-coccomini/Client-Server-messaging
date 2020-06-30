@@ -1,0 +1,438 @@
+@keyframes slide-up {
+	from {
+		margin-top: 100%;
+		height: 600px;
+	} to {
+		margin-top: 0%;
+		height: 500px;
+	}
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px auto;
+	color: #555;
+	font-size: 13px;
+	overflow: hidden;
+	font-family: Myriad Pro, Open Sans, sans-serif;
+}
+
+.no-display {
+	display: none;
+}
+
+.phone-container {
+	position: absolute;
+	width: 360px;
+	height: 570px;
+	top: calc(100vh - 605px);
+	left: calc(100vw - 360px);
+	animation: 0.6s slide-up;
+	background-position: 50px 25px;
+	background-size: 260px 700px;
+	background-repeat: no-repeat;
+	z-index: 100;
+}
+
+.phone-container.home {
+	background-image: url('../img/phone/background.jpg');
+}
+
+.phone-container.regular {
+	background-image: linear-gradient(#FBFBFB 0px, #FBFBFB 0px);
+}
+
+.phone-container > img {
+	position: relative;
+	pointer-events: none;
+	z-index: 100;
+}
+
+.phone-data {
+	display: inline-block;
+	width: 215px;
+	height: 40px;
+}
+
+.icon-data-wrapper {
+	float: right;
+	height: 20px;
+	width: 20px;
+	margin: 10px 0px;
+	background-repeat: no-repeat;
+}
+
+.phone-data.home > .icon-data-wrapper.battery {
+	background-image: url('../img/phone/battery.png');
+}
+
+.phone-data.home > .icon-data-wrapper.signal {
+	background-image: url('../img/phone/signal.png');
+}
+
+.phone-data.regular > .icon-data-wrapper.battery {
+	background-image: url('../img/phone/battery_grey.png');
+}
+
+.phone-data.regular > .icon-data-wrapper.signal {
+	background-image: url('../img/phone/signal_grey.png');
+}
+
+.phone-content {
+	position: absolute;
+	width: 260px;
+	height: 545px;
+	top: 26px;
+	left: 51px;
+	border-radius: 10px;
+	z-index: 0;
+}
+
+.clock {
+	width: 200px;
+	margin: 50px 30px;
+	color: white;
+	text-align: center;
+}
+
+.time {
+	font-size: 44px;
+	font-weight: bold;
+}
+
+.date {
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+.buttons {
+	position: absolute;
+	top: 460px;
+	width: 260px;
+	height: 50px;
+}
+
+.buttons > div {
+	display: inline-block;
+	width: 42px;
+	height: 42px;
+	margin: 0px 20px;
+}
+
+.call-app {
+	background: url('../img/phone/apps.png') 0px 0px;
+}
+
+.sms-app {
+	background: url('../img/phone/apps.png') 42px 0px;
+}
+
+.contacts-app {
+	background: url('../img/phone/apps.png') 84px 0px;
+}
+
+.card-holder {
+	height: 410px; 
+	margin-top: -4px;
+	padding-top: 4px;
+	background-color: #F6F6F6;
+}
+
+.card {
+	width: 235px;
+	margin: 4px 8px;
+	padding: 1px 2px;
+	border: 1px solid #DDD;
+	border-radius: 3px;
+	box-shadow: 0.5px 0.5px #D4D4D4;
+	background-color: white;
+}
+
+.search-card {
+	height: 35px;
+}
+
+.card-search-image {
+	float: left;
+	width: 35px;
+}
+
+.card-search-image img {
+	width: 34px;
+	height: 34px;
+}
+
+.card-search-input {
+	float: left;
+	height: 35px;
+	width: 200px;
+	line-height: 35px;
+}
+
+.card-search-input input {
+	width: 195px;
+	outline-style: none;
+	box-shadow: none;
+	border-color: transparent;
+}
+
+.calls-options {
+	display: inline-block;
+	margin-top: 10px;
+	border-bottom: 1px solid #DDD;
+	box-shadow: 0.5px 0.5px #E1E1E1;
+}
+
+.option-wrapper {
+	float: left;
+	height: 28px;
+	width: 129px;
+	text-align: center;
+}
+
+.option-wrapper > img {
+	pointer-events: none;
+}
+
+.option-active {
+	border-bottom: 2px solid #039BE5;
+}
+
+.phone-card {
+	height: 50px;
+}
+
+.phone-card > div {
+	height: 50px;
+}
+
+.card-avatar {
+	float: left;
+	width: 38px;
+	height: 38px !important;
+	margin: 6px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: blue;
+}
+
+.card-avatar span {
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 38px;
+	vertical-align: middle;
+}
+
+.card-text {
+	float: left;
+	width: 155px;
+	padding: 8px 2px 0px 2px;
+}
+
+.card-text div {
+	width: 155px;
+}
+
+.card-text-header {
+	height: 20px;
+	font-weight: bold;
+}
+
+.card-text-footer {
+	height: 24px;
+	font-size: 10px;
+	margin-top: 2px;
+}
+
+.card-option {
+	float: left;
+	width: 25px;
+}
+
+.card-option > img {
+	height: 22px !important;
+	width: 22px !important;
+	margin: 13px 4px 13px 0px;
+}
+
+.contact-header {
+	margin: 0px 10px 10px 30px;
+	font-size: 17px;
+	font-weight: bolder;
+}
+
+.contact-row {
+	display: inline-block;
+	width: 260px;
+	height: 52px;
+}
+
+.contact-start {
+	float: left;
+	width: 50px;
+	height: 52px;
+	padding-left: 10px;
+	line-height: 52px;
+	color: #039BE5;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.contact-name {
+	float: left;
+	width: 145px;
+	margin-left: 5px;
+	line-height: 52px;
+}
+
+.floating-button {
+	position: absolute;
+	bottom: 35px;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	box-shadow: 2px 2px rgba(115, 115, 115, 0.3);
+}
+
+.floating-button img {	
+	padding: 12px;
+}
+
+.floating-button span {
+	color: white;
+	font-size: 19px;
+	margin-left: 15px;
+	line-height: 42px;
+}
+
+.floating-button.right {
+	right: 20px;
+	background-color: #1976D2;
+}
+
+.floating-button.middle {
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	background-color: #00C853;
+}
+
+.contacts-filter {
+	height: 150px;
+}
+
+.phone-type {
+	display: inline-block;
+	height: 40px;
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	box-shadow: -3px -3px 3px #EEE;
+}
+
+.number-display {
+	float: left;
+	width: 180px;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 40px;
+	text-align: center;
+}
+
+.number-display span {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.display-clear {
+	float: left;
+	width: 40px;
+	height: 40px;
+}
+
+.display-clear img {
+	padding: 11px;
+}
+
+.number-container {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 0px 40px;
+}
+
+.number-container > div {
+	float: left;
+	width: 30px;
+	height: 55px;
+	margin: 0px 15px;
+	font-size: 32px;
+	color: #1976D2;
+	text-align: center;
+	line-height: 55px;
+}
+
+.virtual-buttons {
+	position: absolute;
+	width: 260px;
+	height: 30px;
+	top: 540px;
+	left: 50px;
+}
+
+.virtual-buttons > div {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	margin: 0px 27px;
+}
+
+.virtual-buttons > .virtual-back {
+	background: url('../img/phone/virtual-icons-white.png') -25px -4px;
+}
+
+.virtual-buttons > .virtual-home {
+	background: url('../img/phone/virtual-icons-white.png') -132px -4px;
+}
+
+.virtual-buttons > .virtual-close {
+	background: url('../img/phone/virtual-icons-white.png') -246px -4px;
+}
+
+.message-number {
+	font-weight: bold;
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+.message-preview {
+	margin-top: 5px;
+	font-size: 11px;
+	padding-right: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.search-message {
+	padding: 0px 15px 10px;
+	border-bottom: 1px solid #DDD;
+	box-shadow: 0.5px 0.5px #E1E1E1;
+}
+
+.search-message > input {
+	margin-left: 5px;
+	outline: none;
+	border: none;
+	padding: 0px 5px;
+}
+
+.contact-first-letter {
+	height: 30px;
+	color: black;
+	padding-left: 20px;
+	font-weight: bold;
+	line-height: 30px;
+	vertical-align: middle;
+}

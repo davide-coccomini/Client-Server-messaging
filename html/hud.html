@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <link rel="stylesheet" href="../css/hud.css" />
+    <link rel="stylesheet" href="../lib/fontawsome/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="help-panel" id="help">
+        <div class="help-line"><span class="help-key">T</span> Chat</div>
+        <div class="help-line"><span class="help-key">I</span>Inventario</div>
+        <div class="help-line"><span class="help-key">F4</span>Anims</div>
+        <div class="help-line"><span class="help-key">X</span> Stop Anim</div>
+        <div class="help-line"><span class="help-key" id="help-icon-box"><img src="../img/mouse-right.png" class="help-icon"></span> + <span class="help-key" style="margin-left: 2px">F6</span>R-Menu</div>
+    </div>
+    <div class="logo text-center">
+        <img src="../img/logoHUD.png">
+    </div>
+    <div class="container-fluid" id="hud">
+        <div class="container-box col-md-2">
+
+            <div class="col-md-12 info-box padding-sm">
+      
+
+            </div>
+            <div class="col-md-12 padding-sm">
+                <ul style="list-style: none; padding: 0">
+                    <li class="row">
+                        <div class="circle col-md-1" id="circle-bank"></div>
+                        <div class="progress col-md-5" id="progress-bank">
+                            $0
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="circle col-md-1" id="circle-money"></div>
+                        <div class="progress col-md-5" id="progress-money">
+                            $0
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="circle col-md-1" id="circle-health"></div>
+                        <div class="progress col-md-5" id="progress-health">
+                            <div class="field" id="health"></div>
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="circle col-md-1" id="circle-armor"></div>
+                        <div class="progress col-md-5" id="progress-armor">
+                            <div class="field" id="armor"></div>
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="circle col-md-1" id="circle-hunger"></div>
+                        <div class="progress col-md-5" id="progress-hunger">
+                            <div class="field" id="hunger"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script src="../lib/jquery-3.4.0.min.js"></script>
+    <script src="../js/utils/initializer.js"></script>
+    <script src="../js/hud.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<script src="../lib/jquery-3.4.0.min.js"></script>
+<script src="../lib/bootstrap.min.js"></script>
+<script src="../lib/i18next.min.js"></script>
+<script src="../lib/jquery-i18next.min.js"></script>
+<script src="../lib/i18nextXHRBackend.min.js"></script>
+<script src="../js/utils/initializer.js"></script>
+<script src="../js/ucp.js"></script>
+<link rel="stylesheet" href="../lib/fontawsome/css/all.min.css">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<style>
+    .btn-success:not(:disabled):not(.disabled).active,
+    .btn-success:not(:disabled):not(.disabled):active,
+    .show>.btn-success.dropdown-toggle,
+    .btn-success {
+        text-align: center;
+        text-transform: uppercase;
+        border-color: #145b94;
+        background-color: rgb(20, 91, 148);
+        color: whitesmoke;
+    }
+
+    .btn-success:hover {
+        background-color: #1e7dc9;
+        border-color: #145b94
+    }
+</style>
+<div id="container" class="text-center col-md-12" style="padding: 0">
+    <iframe id="iframe" style="border: 0; padding: 0;" class="col-md-12"> </iframe>
+</div>
+<i class="fa fa-times" onclick="destroyBrowser()" style="position: absolute; top: 0.9vh; right: 0.8vw; font-size: 40px; color:white;
+    text-shadow: 2px 2px 2px black; cursor: pointer"></i>
+<script>
+    showUCP();
+</script>

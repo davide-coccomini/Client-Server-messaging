@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/carDashboard.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.2.45/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="../lib/jquery-3.4.0.min.js"></script>
+    <script src="../lib/i18next.min.js"></script>
+    <script src="../lib/jquery-i18next.min.js"></script>
+    <script src="../lib/i18nextXHRBackend.min.js"></script>
+    <script src="../js/carDashboard.js"></script>
+    <script src="../js/utils/initializer.js"></script>
+
+</head>
+
+<body>
+
+
+
+<div class="col-md-5 row" id="container">
+    <div class="col-md-11 row">
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="../img/carDashboard/fari.png" class="icon" id="headlights">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="../img/carDashboard/abbaglianti.png" class="icon" id="brights">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="../img/carDashboard/frecce.png" class="icon" id="arrows">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="../img/carDashboard/cofano.png" class="icon" id="hood">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="../img/carDashboard/porte.png" class="icon" id="doors">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="../img/carDashboard/bagagliaio.png" class="icon" id="trunk">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2" id="direction">
+                    N
+                </div>
+                <div class="col-md-8" id="street">
+
+                    <p id="main-street">West Downtown Ave</p>
+                    <p id="city">Paleto Bay</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 row" style="margin-top: -1vh; margin-left: -2vw;">
+            <div class="col-md-4" id="speedometer">
+                125
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <div class="row" id="warnings">
+                        <div class="col-md-6">
+                            <img src="../img/carDashboard/motore.png" class="icon" id="engine">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../img/carDashboard/cinture.png" class="icon" id="belt">
+                        </div>
+                    </div>
+                    <div class="col-md-12 kms">
+                        KM/h
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" id="odometer">
+                0000412312 KM
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-md-1" id="fuel">
+        <div id="fluid-meter-2"></div>
+    </div>
+</div>
+
+<script>
+    var fm = new FluidMeter();
+    fm.init({
+        targetContainer: document.getElementById("fluid-meter-2"),
+        fillPercentage: 75,
+        options: {
+            fontFamily: "Oxygen",
+            fontSize: "3vh",
+            drawPercentageSign: true,
+            drawBubbles: false,
+            size: $(document).height()/7,
+            borderWidth: 2,
+            backgroundColor: "#262626",
+            foregroundColor: "#4C4A4A",
+            foregroundFluidLayer: {
+              fillStyle: "#11575e",
+               angularSpeed: 100,
+               maxAmplitude: 3,
+               frequency: 30,
+               horizontalSpeed: -150
+
+            },
+            backgroundFluidLayer: {
+                fillStyle: "#3b9473",
+                angularSpeed: 100,
+                maxAmplitude: 6,
+                frequency: 23,
+                horizontalSpeed: 1
+            }
+        }
+    });
+
+    window.onload = function () {
+        
+    };
+</script>
+</body>
+</html>

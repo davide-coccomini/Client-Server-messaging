@@ -1,0 +1,16 @@
+{
+    "host": "server.svrp.it",
+    "username": "web",
+    "password": "245xgly",
+    "remotePath": "",
+    "protocol": "ftp",
+    "port": 21,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": false,
+    "autoDownload": true,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/test.css">
+    <link rel="stylesheet" href="../css/scrollbar.css" />
+  </head>
+  <body>
+    <div id="application" class="application-panel">
+      <div id="question" class="question-header"></div>
+      <div id="answers" class="answers-content"></div>
+      <div class="buttons">
+          <div id="next" class="accept" onclick="nextQuestion()" data-i18n="application.next"></div>
+          <div id="finish" class="accept hidden" onclick="submitApplication()" data-i18n="application.finish"></div>
+          <div id="previous" class="cancel" onclick="previousQuestion()" data-i18n="application.previous" disabled></div>
+      </div>
+    </div>
+
+    <div id="failure" class="failure hidden">
+      <img src="../img/fail.png" />
+      <div id="mistakes" class="mistakes"></div>
+      <div class="retry" onclick="mp.trigger('retryApplication')" data-i18n="application.retry"></div>
+    </div>
+  </body>
+
+  <script src="../lib/jquery-3.4.0.min.js"></script>
+  <script src="../lib/i18next.min.js"></script>
+  <script src="../lib/jquery-i18next.min.js"></script>
+  <script src="../lib/i18nextXHRBackend.min.js"></script>
+  <script src="../js/utils/initializer.js"></script>
+  <script src="../js/test.js"></script>
+
+</html>

@@ -1,0 +1,270 @@
+﻿body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	color: #f3faff;
+    font-family: Myriad Pro, Open Sans, sans-serif;
+}
+
+.active-item {
+	background-color: rgba(68, 126, 172, 0.8);
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.menu-content {
+	position: absolute;
+	box-shadow: 6px 3px 15px 0px rgba(0,0,0,0.5);
+	top: 13vh;
+	right: 3%;
+	width: 25%;
+	height: 64vh;
+}
+
+@font-face{
+    font-family: "us";
+    src: url("../fonts/signpainter.ttf");
+}
+
+@font-face{
+	font-family: "roboto";
+	src: url("../fonts/roboto.ttf");
+}
+.menu-header-title{
+    font-size: 23px;
+    text-decoration: inherit;
+    text-decoration-style: solid;
+    text-shadow: 2px 2px 2px #224f74;
+    text-rendering: optimizeLegibility;
+    position: relative;
+}
+
+.shadowRow {
+	color: #f3faff;
+}
+
+.menu-header {
+	position: relative;
+	height: 4.5vh;
+	line-height: 5vh;
+	font-family: "roboto";
+	color:#1a72b9;
+	font-size: 1.1vmax;
+	padding-left: 10px;
+    padding-right: 10px;
+	vertical-align: middle;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+    background-color: #161616;
+	text-shadow: 2px 2px black;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.menu-body {
+	height: 55vh;
+	overflow-y: auto;
+    background-color: #272727bf;
+	font-size: 22px;
+	color: whitesmoke;
+}
+
+hr {
+	border-width: 0.1px;
+}
+
+.menu-options {
+	height: 4vh;
+	color: whitesmoke;
+}
+
+.item-row {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 90px;
+}
+
+.item-image {
+	float: left;
+	width: 64px;
+	height: 64px;
+	margin: 7px;
+}
+
+.item-content {
+	float: left;
+	margin-left: 2px;
+	line-height: 34px;
+	vertical-align: middle;
+	width: calc(100% - 80px);
+}
+
+.item-header {
+	width: 100%;
+	height: 30px;
+}
+
+.item-purchase {
+	display: inline-block;
+	width: calc(100% - 80px);
+	height: 48px;
+	line-height: 48px;
+	vertical-align: middle;
+}
+
+.item-price-container {
+	float: left;
+	width: 45%;
+}
+
+.item-amount-container {
+	float: left;
+	width: 40%;
+}
+
+.item-amount-desc-container {
+	float: left;
+	text-align: right;
+	padding-right: 30px;
+	width: calc(100% - 80px);
+}
+
+.item-add-substract-container {
+	float: right;
+	width: 50px;
+}
+
+.item-adder {
+	font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.item-substract {
+	font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.single-button {
+	display: inline;
+	float: left;
+	height: 4.5vh;
+	width: 100%;
+	font-weight: bold;
+	text-align: center;
+	line-height: 5vh;
+	vertical-align: middle;
+}
+
+.double-button {
+	display: inline;
+	float: left;
+	height: 4.5vh;
+	width: 50%;
+	font-weight: bold;
+	text-align: center;
+	line-height: 4.5vh;
+	vertical-align: middle;
+}
+
+.accept-button {
+	background-color: #145b94;
+}
+
+.accept-button:hover {
+	background-color: #1a72b9;
+}
+
+.cancel-button {
+	background-color: #145b94;
+}
+
+.cancel-button:hover {
+	background-color: #1a72b9;
+}
+
+
+.weapon_minismg { background-image: url('../img/inventory/inventory.png'); background-position: 0px 0px }
+.weapon_microsmg { background-image: url('../img/inventory/inventory.png'); background-position: -64px 0px }
+.weapon_musket { background-image: url('../img/inventory/inventory.png'); background-position: -128px 0px }
+.weapon_pistol { background-image: url('../img/inventory/inventory.png'); background-position: -192px 0px }
+.weapon_heavypistol { background-image: url('../img/inventory/inventory.png'); background-position: -256px 0px }
+.weapon_pumpshotgun { background-image: url('../img/inventory/inventory.png'); background-position: -320px 0px }
+.weapon_revolver { background-image: url('../img/inventory/inventory.png'); background-position: -384px 0px }
+.weapon_sawnoffshotgun { background-image: url('../img/inventory/inventory.png'); background-position: -448px 0px }
+.weapon_smg { background-image: url('../img/inventory/inventory.png'); background-position: -512px 0px }
+.weapon_sniperrifle { background-image: url('../img/inventory/inventory.png'); background-position: -576px 0px }
+.weapon_snspistol { background-image: url('../img/inventory/inventory.png'); background-position: 0px -64px }
+.weapon_specialcarbine { background-image: url('../img/inventory/inventory.png'); background-position: -64px -64px }
+.weapon_stungun { background-image: url('../img/inventory/inventory.png'); background-position: -128px -64px }
+.weapon_autoshotgun { background-image: url('../img/inventory/inventory.png'); background-position: -192px -64px }
+.weapon_vintagepistol { background-image: url('../img/inventory/inventory.png'); background-position: -256px -64px }
+.weapon_marksmanpistol { background-image: url('../img/inventory/inventory.png'); background-position: -320px -64px }
+.weapon_machinepistol { background-image: url('../img/inventory/inventory.png'); background-position: -384px -64px }
+.weapon_marksmanrifle { background-image: url('../img/inventory/inventory.png'); background-position: -448px -64px }
+.weapon_mg { background-image: url('../img/inventory/inventory.png'); background-position: -512px -64px }
+.weapon_advancedrifle { background-image: url('../img/inventory/inventory.png'); background-position: -576px -64px }
+.weapon_dbshotgun { background-image: url('../img/inventory/inventory.png'); background-position: 0px -128px }
+.weapon_flaregun { background-image: url('../img/inventory/inventory.png'); background-position: -64px -128px }
+.weapon_gusenberg { background-image: url('../img/inventory/inventory.png'); background-position: -128px -128px }
+.weapon_heavyshotgun { background-image: url('../img/inventory/inventory.png'); background-position: -192px -128px }
+.weapon_pistol50 { background-image: url('../img/inventory/inventory.png'); background-position: -256px -128px }
+.weapon_heavysniper { background-image: url('../img/inventory/inventory.png'); background-position: -320px -128px }
+.weapon_appistol { background-image: url('../img/inventory/inventory.png'); background-position: -384px -128px }
+.weapon_carbinerifle { background-image: url('../img/inventory/inventory.png'); background-position: -448px -128px }
+.weapon_bullpupshotgun { background-image: url('../img/inventory/inventory.png'); background-position: -512px -128px }
+.weapon_combatmg { background-image: url('../img/inventory/inventory.png'); background-position: -576px -128px }
+.weapon_combatpdw { background-image: url('../img/inventory/inventory.png'); background-position: 0px -192px }
+.weapon_combatpistol { background-image: url('../img/inventory/inventory.png'); background-position: -64px -192px }
+.weapon_compactrifle { background-image: url('../img/inventory/inventory.png'); background-position: -128px -192px }
+.weapon_assaultshotgun { background-image: url('../img/inventory/inventory.png'); background-position: -192px -192px }
+.weapon_assaultsmg { background-image: url('../img/inventory/inventory.png'); background-position: -256px -192px }
+.weapon_assaultrifle { background-image: url('../img/inventory/inventory.png'); background-position: -320px -192px }
+.weapon_bullpuprifle { background-image: url('../img/inventory/inventory.png'); background-position: -384px -192px }
+.weapon_bat { background-image: url('../img/inventory/inventory.png'); background-position: -448px -192px }
+.weapon_bottle { background-image: url('../img/inventory/inventory.png'); background-position: -512px -192px }
+.weapon_crowbar { background-image: url('../img/inventory/inventory.png'); background-position: -576px -192px }
+.weapon_flashlight { background-image: url('../img/inventory/inventory.png'); background-position: 0px -256px }
+.weapon_golfclub { background-image: url('../img/inventory/inventory.png'); background-position: -64px -256px }
+.weapon_hammer { background-image: url('../img/inventory/inventory.png'); background-position: -128px -256px }
+.weapon_hatchet { background-image: url('../img/inventory/inventory.png'); background-position: -192px -256px }
+.weapon_knife { background-image: url('../img/inventory/inventory.png'); background-position: -256px -256px }
+.weapon_machete { background-image: url('../img/inventory/inventory.png'); background-position: -320px -256px }
+.weapon_nightstick { background-image: url('../img/inventory/inventory.png'); background-position: -384px -256px }
+.weapon_switchblade { background-image: url('../img/inventory/inventory.png'); background-position: -448px -256px }
+.weapon_knuckle { background-image: url('../img/inventory/inventory.png'); background-position: -512px -256px }
+.weapon_wrench { background-image: url('../img/inventory/inventory.png'); background-position: -576px -256px }
+.ammo_pistol { background-image: url('../img/inventory/inventory.png'); background-position: 0px -320px }
+.ammo_rifle { background-image: url('../img/inventory/inventory.png'); background-position: -64px -320px }
+.ammo_shotgun { background-image: url('../img/inventory/inventory.png'); background-position: -128px -320px }
+.ammo_smg { background-image: url('../img/inventory/inventory.png'); background-position: -192px -320px }
+.ammo_sniper { background-image: url('../img/inventory/inventory.png'); background-position: -256px -320px }
+.prop_bait { background-image: url('../img/inventory/inventory.png'); background-position: -320px -320px }
+.prop_fish { background-image: url('../img/inventory/inventory.png'); background-position: -384px -320px }
+.prop_products { background-image: url('../img/inventory/inventory.png'); background-position: -448px -320px }
+.prop_stolen { background-image: url('../img/inventory/inventory.png'); background-position: -512px -320px }
+.prop_weed { background-image: url('../img/inventory/inventory.png'); background-position: -576px -320px }
+.prop_energy_drink { background-image: url('../img/inventory/inventory.png'); background-position: 0px -384px }
+.prop_cs_walkie_talkie { background-image: url('../img/inventory/inventory.png'); background-position: -64px -384px }
+.prop_food_bs_chips { background-image: url('../img/inventory/inventory.png'); background-position: -128px -384px }
+.prop_beer_am { background-image: url('../img/inventory/inventory.png'); background-position: -192px -384px }
+.p_fag_packet_01_s { background-image: url('../img/inventory/inventory.png'); background-position: -256px -384px }
+.prop_ld_jerrycan_01 { background-image: url('../img/inventory/inventory.png'); background-position: -320px -384px }
+.prop_ecola_can { background-image: url('../img/inventory/inventory.png'); background-position: -384px -384px }
+.prop_pap_camera_01 { background-image: url('../img/inventory/inventory.png'); background-position: -448px -384px }
+.prop_cs_burger_01 { background-image: url('../img/inventory/inventory.png'); background-position: -512px -384px }
+.xm_prop_x17_phone_01 { background-image: url('../img/inventory/inventory.png'); background-position: -576px -384px }
+.prop_fishing_rod_01 { background-image: url('../img/inventory/inventory.png'); background-position: 0px -448px }
+.prop_cs_hotdog_01 { background-image: url('../img/inventory/inventory.png'); background-position: -64px -448px }
+.p_wine_glass_s { background-image: url('../img/inventory/inventory.png'); background-position: -128px -448px }
+.prop_candy_pqs { background-image: url('../img/inventory/inventory.png'); background-position: -192px -448px }
+.prop_sandwich_01 { background-image: url('../img/inventory/inventory.png'); background-position: -256px -448px }
+.prop_food_cb_juice01 { background-image: url('../img/inventory/inventory.png'); background-position: -320px -448px }
+.prop_food_coffee { background-image: url('../img/inventory/inventory.png'); background-position: -384px -448px }
+.prop_cava { background-image: url('../img/inventory/inventory.png'); background-position: -448px -448px }
+.prop_beer_box_01 { background-image: url('../img/inventory/inventory.png'); background-position: -512px -448px }

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/general.css">
+  <link rel="stylesheet" href="../css/bankMenu.css">
+  <link rel="stylesheet" href="../css/scrollbar.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../lib/fontawsome/css/all.min.css">
+  
+  <script>
+  function validate(evt){
+  var theEvent = evt || window.event;
+
+  // Handle paste
+  if (theEvent.type === 'paste') {
+      key = event.clipboardData.getData('text/plain');
+  } else {
+  // Handle key press
+      var key = theEvent.keyCode || theEvent.which;
+      key = String.fromCharCode(key);
+  }
+  var regex = /[0-9]|\./;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
+  </script>
+</head>
+<body class="background col-lg-12">
+  <div class="col-lg-6 center-block card card-body vertical-center text-center" id="bank-container">
+    <div class="panel-heading col-lg-12">
+        <i class="fas fa-university"></i>
+      </div>
+ <figure class="figure col-lg-6 pointer" onclick="close();">
+   <img src="../img/close.png" style="width: 24px; height: 24px; position: absolute; left: 905px; top: -550px;"
+     class="figure-img img-fluid rounded center-block" />
+ </figure>
+    <!-- ATM's main menu -->
+    <div id="bank-menu" class="panel-body">
+
+      <!-- Withdraw and deposit options -->
+      <div class="row menu-row">
+        <div class="menu-option-container col-lg-6 ">
+        <figure class="figure menu-option pointer col-lg-12" onclick="withdrawMoney();">
+          <i class="fas fa-wallet"></i>
+          <p>Preleva</p>
+        </figure>
+        </div>
+        <div class="menu-option-container col-lg-6 ">
+        <figure class="figure menu-option col-lg-12 pointer center" onclick="depositMoney();">
+          <i class="fas fa-donate"></i>
+          <p>Deposita</p>
+        </figure>
+        </div>
+         
+      </div>
+
+      <!-- Transfer and balance options -->
+      <div class="row menu-row">
+        <div class="menu-option-container col-lg-6 ">
+        <figure class="figure menu-option col-lg-12 pointer" onclick="transferMoney();">
+          <i class="fas fa-comments-dollar"></i>
+          <p>Trasferisci</p>
+        </figure>
+      </div>
+      <div class="menu-option-container col-lg-6 ">
+        <figure class="figure menu-option col-lg-12 pointer" onclick="showBalance();">
+          <i class="fas fa-balance-scale-right"></i>
+          <p>Bilancio</p>
+        </figure>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Withdraw money option -->
+    <div id="bank-withdraw" class="panel-body d-none">
+      <div class="col-lg-12"><p class="menu-label">Inserisci la quantità da prelevare</p></div>
+        
+      <div class="col-lg-6 offset-3"><input id="bank-withdraw-amount" type="text" onkeypress="validate(event)" value="0" min="0" style="border-radius: 10px; padding: 5px; position:relative; left: calc(100%-10px);"/></div>
+      <div class="col-lg-6 offset-3"><span id="bank-withdraw-error" class="d-none alert alert-danger"></span></div>
+    </div>
+
+    <!-- Deposit money option -->
+    <div id="bank-deposit" class="panel-body d-none">
+      <div class="col-lg-12"><p class="menu-label">Inserisci la quantità da depositare</p></div>
+      <div class="col-lg-6 offset-3"><label data-i18n="bank.available-balance"></label><span id="bank-deposit-balance"></span></div>
+      <div class="col-lg-6 offset-3"><input id="bank-deposit-amount" type="text" onkeypress="validate(event)" value="0" style="border-radius: 10px; padding: 5px; position:relative; left: calc(100%-10px);"/></div>
+      <div class="col-lg-6 offset-3"><span id="bank-deposit-error" class="d-none alert alert-danger"></span></div>
+    </div>
+
+    <!-- Transfer money option -->
+      <div class="buttonfontsp">
+    <div id="bank-transfer" class="panel-body d-none">
+      <!--<div class="col-lg-12"><h1 data-i18n="bank.transfer-money"></h1></div>-->
+      <p class="menu-label">Inserisci il beneficiario e l'importo da trasferire</p>
+      <div class="col-lg-6 offset-3"><label data-i18n="bank.available-balance"></label></div>
+      <div class="col-lg-6 offset-3"><input id="bank-transfer-person" type="text" data-i18n="[placeholder]bank.receiver" style="border-radius: 10px; padding: 5px; position:relative;"/></div>
+      <div class="col-lg-6 offset-3"><input id="bank-transfer-amount" type="text" onkeypress="validate(event)" value="0" style="border-radius: 10px; padding: 5px; position:relative; left: calc(100%-10px); top: calc(50%-10px);"/></div>
+      <div class="col-lg-6 offset-3"><span id="bank-transfer-error" class="d-none alert alert-danger"></span></div>
+    </div>
+      </div>
+
+    <!-- Bank account's balance option -->
+    <div id="bank-balance" class="panel-body d-none">
+      <div class="col-lg-8 offset-3"></div>
+      <table class="col-lg-8 offset-3">
+        <thead class="thead-default">
+          <tr>
+            <th>Giorno</th>
+            <th>Operazione</th>
+            <th>Beneficiario</th>
+            <th>Ammontare</th>
+          </tr>
+        </thead>
+        <tbody id="bankBalanceTableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="btn-group panel-footer col-lg-12" role="group">
+        <div class="buttonfontsp">
+            
+      <button id="bank-accept" type="button" class="btn btn-secondary d-none" data-i18n="general.accept" onclick="bankAccept();" style="position:absolute; left: calc(45% - 40px); width: 75px; height 18px;">
+        <i class="fas fa-check"></i>
+      </button>
+      <button id="bank-exit" type="button" class="btn btn-secondary d-none" data-i18n="general.exit"
+        onclick="bankBack();" style="position:absolute; left: calc(57% - 40px); width: 75px;">
+        <i class="fas fa-times"></i>
+      </button>
+        <button id="bank-back" type="button" class="btn btn-secondary d-none" data-i18n="general.exit"
+          onclick="bankBack();" style="position:absolute; left: calc(50% - 40px); width: 75px;">
+          <i class="fas fa-times"></i>
+        </button>
+        </div>
+    </div>
+
+  </div>
+</body>
+
+<script src="../lib/jquery-3.4.0.min.js"></script>
+<script src="../lib/bootstrap.min.js"></script>
+<script src="../lib/i18next.min.js"></script>
+<script src="../lib/jquery-i18next.min.js"></script>
+<script src="../lib/i18nextXHRBackend.min.js"></script>
+<script src="../js/utils/initializer.js"></script>
+<script src="../js/functions.js"></script>
+
+</html>
